@@ -1,20 +1,15 @@
 #include<stdio.h>
-#include<stdlib.h>
 int main()
 {
-    int n,d,rev=0,temp=0,c=0;
+    int n,d,rev=0,c=0,temp;
     scanf("%d",&n);
     temp=n;
     while(n)
     {
         d=n%10;
-        if(d==0)
-        {
-            c++;
-        }
         rev=(rev*10)+d;
         n=n/10;
     }
-        printf("%d",rev);
-    
+    printf("%d",rev);
+    return 0;
 }
