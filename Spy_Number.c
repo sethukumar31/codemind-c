@@ -1,25 +1,24 @@
-#include <stdio.h>
+#include<stdio.h>
 #include<math.h>
 int main()
 {
-    int n,mult=1,sum=0;
-    int d;
+    int n,mult=1,sum=0,r;
     scanf("%d",&n);
-    while(n>0)
+    while(n>0) 
     {
-        d=n%10;
-        sum=sum+d;
-        mult=mult*d;
+        r=n%10;
+        sum=sum+r;
+        mult=mult*r;
         n=n/10;
     }
     if(sum==mult)
     {
-    printf("Spy Number
+        printf("Spy Number
 ");
     }
     else
     {
-    printf("Not Spy Number");
+        printf("Not Spy Number");
     }
     return 0;
 }
