@@ -6,16 +6,15 @@ int main()
     scanf("%d",&n);
     for(i=1;i<n;i++)
     {
-        m=i;
+       // m=i;
         if((i*i)==n)
         {
             printf("True
 ");
-         return 0;
+            return 0;
         }
-    }
-            printf("False
+    } 
+    printf("False
 ");
-   // printf("%d",m);
     return 0;
 }
