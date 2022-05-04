@@ -10,15 +10,14 @@ int main()
         k++;
         n=n/10;
     }
-     max=arr[0];
-    for(i=0;i<=k;i++)
+    max=arr[0];
+    for(i=0;i<=k;i++) 
+  {  
+    if(arr[i]>max)
     { 
-        //max=arr[0];
-        if(arr[i]>max)
-        {
-            max=arr[i];
-        }
+        max=arr[i];
     }
-    printf("%d",max);
-    return 0;
+}
+  printf("%d",max);
+  return 0;
 }
