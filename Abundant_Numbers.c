@@ -7,13 +7,12 @@ int main()
     {
         if(n%i==0)
         {
-            sum=sum+i;
-            //printf("%d",sum);
-        }
-    }
-    if(sum>n)
-    printf("True");
-    else
-    printf("False");
-    return 0;
+            sum=sum+i; 
+        } 
+    } 
+if(sum>n) 
+printf("True");
+else
+printf("False");
+return 0;
 }
