@@ -1,7 +1,8 @@
 #include<stdio.h>
-int main()
+int  main()
 {
- int n, i, c = 0;
+int n, i, c = 0;
+//printf("Enter any number n:");
 scanf("%d", &n);
 for(i =1; i<=n;i++)
 {
@@ -12,8 +13,7 @@ c ++;
 }
 if (c == 2)
 {
-printf("prime
-");
+printf("prime");
 }
 else
 {
