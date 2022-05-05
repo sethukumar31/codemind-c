@@ -1,24 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int n,rev,temp,sum=0;
-    scanf("%d",&n);
-    temp=n;
-    while(n>0)
+    int n, t, sum = 0, remainder ;
+    scanf ("%d", &n);
+    t = n;
+    while (n>0)
     {
-        rev=n%10;
-        sum=sum*10+rev;
-        n=n/10;
+        remainder = n % 10;
+        sum = sum *10 + remainder ;
+        n = n/ 10;
     }
-    if(sum==temp)
-    {
-        printf("True
-");
-    }
-        else
-    {
-        printf("False
-");
-    }
+    if(t== sum )
+    printf ("True");
+    else
+    printf ("False");
     return 0;
+    
 }
