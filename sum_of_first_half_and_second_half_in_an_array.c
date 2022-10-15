@@ -1,22 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int n,arr[10000],i,sum1=0,sum2=0,mid;
+    int i,n,s1=0,s2=0;
     scanf("%d",&n);
+    int arr[n];
     for(i=0;i<n;i++)
     {
         scanf("%d",&arr[i]);
     }
-    mid=n/2;
-    for(i=0;i<mid;i++)
+    for(i=0;i<n/2;i++)
     {
-        sum1+=arr[i];
+        s1=s1+arr[i];
+    }
+    for(i=(n/2);i<n;i++)
+    {
+        s2=s2+arr[i];
     }
     printf("%d
-",sum1);
-    for(i=mid;i<n;i++)
-    {
-        sum2+=arr[i];
-    }
-    printf("%d",sum2);
+%d",s1,s2);
 }
