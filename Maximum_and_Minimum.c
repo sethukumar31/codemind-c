@@ -1,48 +1,46 @@
 #include<stdio.h>
 int main()
 {
-    long int n,d=0,arr[1000],i,f=1,j,c=0,a[100],k=0,max=0,min;
+    int n,arr[10000],i,j,d=0,c=0,flag=0,max=0,min=99;
     float avg;
-    scanf("%ld",&n);
-    for(i=0;i<n;i++)
-    scanf("%ld",&arr[i]);
-    //printf("
-");
+    scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        f=1;
-        for(j=i+1;j<n;j++)
-        {
-        if(arr[i]==arr[j])
-        {
-        f++;
-        }
-        }
-   if(f==arr[i])
-   {
-    c++;
-    a[k++]=arr[i];
-   }
+        scanf("%d",&arr[i]);
     }
-    /*for(i=0;i<n;i++)
-    printf("%ld ",a[i]);*/
-    min=a[0];
-    if(c==0)
+    for(i=0;i<n;i++)
     {
-        printf("-1");
-        return 0;
-    }
-    for(i=0;i<k;i++)
-    {
-        if(a[i]<min)
+        c=1;
+        for(j=0;j<n;j++)
         {
-            min=a[i];
+            
+            if(arr[i]==arr[j] && i!=j && arr[i]>0)
+            {
+                c++;
+                arr[j]=-1;
+                
+            }
         }
-        if(a[i]>max)
+        if(c==arr[i])
         {
-            max=a[i];
-        }
+            flag=1;
+           
+       
+       
+            if(max<arr[i])
+            {
+                max=arr[i];
+            }
+             if(min>arr[i])
+            {
+                min=arr[i];
+            }
+        
     }
+    }
+    if(flag==1)
     printf("%d %d",min,max);
-    return 0;
-    }
+    else
+    printf("-1");
+   
+}
